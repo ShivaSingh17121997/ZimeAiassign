@@ -115,6 +115,8 @@ export default function Home() {
 
     return (
         <div style={{ maxWidth: " 1280px" }} >
+            <Space>
+           
 
             <div style={{ margin: "10px auto 10px  ", width: "960px" }} >
                 <Input
@@ -348,6 +350,8 @@ export default function Home() {
                     <Pagination totalPage={data.total} page={page} nextPage={nextPage} dataSource={data} prevPage={prevPage} />
                 }
             </div>
+
+                 </Space>
         </div>
     );
 }
