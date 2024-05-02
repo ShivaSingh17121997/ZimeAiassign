@@ -48,7 +48,7 @@ export default function Home() {
         }, {
             title: "Tags",
             dataIndex: "tags",
-            
+
             render: (_, { tags }) => (
                 <>
                     {tags.map((tag) => {
@@ -114,7 +114,7 @@ export default function Home() {
 
 
     return (
-        <div  style={{ maxWidth :" 1280px"}} >
+        <div style={{ maxWidth: " 1280px" }} >
 
             <div style={{ margin: "10px auto 10px  ", width: "960px" }} >
                 <Input
@@ -335,7 +335,10 @@ export default function Home() {
 
 
             {/* Table  */}
-            <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 500 }} />
+            <div style={{ maxWidth: "1280px" }} >
+                <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 400 }} />
+
+            </div>
 
 
 
