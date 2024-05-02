@@ -19,8 +19,7 @@ const getActiveColors = (colors) =>
 
 // input
 
-const { TextArea } = Input;
-// const onChange = (e) => { console.log(e) };
+//const { TextArea } = Input;
 
 
 
