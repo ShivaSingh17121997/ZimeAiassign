@@ -335,7 +335,7 @@ export default function Home() {
 
 
             {/* Table  */}
-            <div style={{ maxWidth: "1280px" }} >
+            <div style={{ maxWidth: "800px" }} >
                 <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 400 }} />
 
             </div>
