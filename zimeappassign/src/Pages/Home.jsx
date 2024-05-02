@@ -144,7 +144,7 @@ export default function Home() {
                                 },
                             },
                         }} >
-                        <Button type="primary" size="large" onClick={() => handleFilter("history")} >History  </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("history")} >History  </Button>
 
                     </ConfigProvider>
 
@@ -159,7 +159,7 @@ export default function Home() {
                                 },
                             },
                         }} >
-                        <Button type="primary" size="large" onClick={() => handleFilter("french")} >French   </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("french")} >French   </Button>
 
                     </ConfigProvider>
 
@@ -175,7 +175,7 @@ export default function Home() {
                             },
                         }}
                     >
-                        <Button type="primary" size="large" onClick={() => handleFilter("french")} >French   </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("french")} >French   </Button>
 
                     </ConfigProvider>
 
@@ -191,7 +191,7 @@ export default function Home() {
                             },
                         }}
                     >
-                        <Button type="primary" size="large" onClick={() => handleFilter("magical")} >Magical </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("magical")} >Magical </Button>
                     </ConfigProvider>
 
                     <ConfigProvider
@@ -207,7 +207,7 @@ export default function Home() {
                         }}
                     >
 
-                        <Button type="primary" size="large" onClick={() => handleFilter("love")} >Love       </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("love")} >Love       </Button>
                     </ConfigProvider>
 
 
@@ -223,7 +223,7 @@ export default function Home() {
                             },
                         }}
                     >
-                        <Button type="primary" size="large" onClick={() => handleFilter("american")} >American</Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("american")} >American</Button>
 
                     </ConfigProvider>
 
@@ -240,7 +240,7 @@ export default function Home() {
                             },
                         }}
                     >
-                        <Button type="primary" size="large" onClick={() => handleFilter("fiction")} >Fiction </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("fiction")} >Fiction </Button>
                     </ConfigProvider>
 
                     <ConfigProvider
@@ -256,7 +256,7 @@ export default function Home() {
                         }}
                     >
 
-                        <Button type="primary" size="large" onClick={() => handleFilter("mystery")} >Mystry  </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("mystery")} >Mystry  </Button>
                     </ConfigProvider>
 
 
@@ -271,7 +271,7 @@ export default function Home() {
                                 },
                             },
                         }} >
-                        <Button type="primary" size="large" onClick={() => handleFilter("crime")} >Crime     </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("crime")} >Crime     </Button>
 
 
                     </ConfigProvider>
@@ -287,7 +287,7 @@ export default function Home() {
                                 },
                             },
                         }} >
-                        <Button type="primary" size="large" onClick={() => handleFilter("english")} >english </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("english")} >english </Button>
 
                     </ConfigProvider>
 
@@ -303,7 +303,7 @@ export default function Home() {
                             },
                         }} >
 
-                        <Button type="primary" size="large" onClick={() => handleFilter("classic")} >Classic </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("classic")} >Classic </Button>
 
                     </ConfigProvider>
                     <span style={{marginLeft:"100px"}} >
@@ -320,7 +320,7 @@ export default function Home() {
                                 },
                             }}
                         >
-                            <Button onClick={handleReset} type="primary" size="large"  >Reset  </Button>
+                            <Button onClick={handleReset} type="primary" size="small"  >Reset  </Button>
 
                         </ConfigProvider>
                     </span>
@@ -354,7 +354,7 @@ export default function Home() {
 
             {/* Table  */}
             <div style={{margin:"15px", maxWidth: "1280px" }} >
-                <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 400 }} />
+                <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 360 }} />
 
             </div>
 
