@@ -116,7 +116,7 @@ export default function Home() {
     return (
         <div  >
 
-            <div style={{ margin: "10px auto 10px  ", width: "70%" }} >
+            <div style={{ margin: "10px auto 10px  ", width: "69%" }} >
                 <Input
                     size="large"
                     width="100px"
@@ -353,7 +353,7 @@ export default function Home() {
 
 
             {/* Table  */}
-            <div style={{margin:"15px", maxWidth: "1280px" }} >
+            <div style={{margin:"15px", maxWidth: "1280px" ,boxShadow :" rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}} >
                 <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 360 }} />
 
             </div>
