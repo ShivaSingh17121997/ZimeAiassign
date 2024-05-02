@@ -354,7 +354,7 @@ export default function Home() {
 
             {/* Table  */}
             <div style={{margin:"15px", maxWidth: "1280px" }} >
-                <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 500 }} />
+                <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 400 }} />
 
             </div>
 
