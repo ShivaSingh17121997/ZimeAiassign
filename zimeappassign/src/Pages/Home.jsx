@@ -112,8 +112,9 @@ export default function Home() {
         setData(filterData)
     }
 
+
     return (
-        <div >
+        <div  style={{ maxWidth :" 1280px"}} >
 
             <div style={{ margin: "10px auto 10px  ", width: "960px" }} >
                 <Input
