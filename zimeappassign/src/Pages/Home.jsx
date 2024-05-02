@@ -114,9 +114,9 @@ export default function Home() {
 
 
     return (
-        <div style={{ maxWidth: " 1280px" }} >
+        <div  >
 
-            <div style={{ margin: "10px auto 10px  ", width: "960px" }} >
+            <div style={{ margin: "10px auto 10px  ", width: "70%" }} >
                 <Input
                     size="large"
                     width="100px"
