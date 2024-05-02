@@ -306,12 +306,30 @@ export default function Home() {
                         <Button type="primary" size="large" onClick={() => handleFilter("classic")} >Classic </Button>
 
                     </ConfigProvider>
+                    <span style={{marginLeft:"100px"}} >
+
+                        <ConfigProvider
+                            theme={{
+                                components: {
+                                    Button: {
+                                        colorPrimary: `linear-gradient(135deg, ${colors2.join(', ')})`,
+                                        colorPrimaryHover: `linear-gradient(135deg, ${getHoverColors(colors1).join(', ')})`,
+                                        colorPrimaryActive: `linear-gradient(135deg, ${getActiveColors(colors1).join(', ')})`,
+                                        lineWidth: 0,
+                                    },
+                                },
+                            }}
+                        >
+                            <Button onClick={handleReset} type="primary" size="large"  >Reset  </Button>
+
+                        </ConfigProvider>
+                    </span>
                 </Space>
             </div>
 
 
             {/* Reset Button */}
-            <div style={{ textAlign: "right", margin: "0 0 10px 0" }} >
+            {/* <div style={{ textAlign: "right", margin: "0 0 10px 0" }} >
                 <space>
                     <ConfigProvider
                         theme={{
@@ -329,14 +347,14 @@ export default function Home() {
 
                     </ConfigProvider>
                 </space>
-            </div>
+            </div> */}
 
 
 
 
             {/* Table  */}
-            <div style={{ maxWidth: "1280px" }} >
-                <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 300 }} />
+            <div style={{margin:"15px", maxWidth: "1280px" }} >
+                <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 500 }} />
 
             </div>
 
