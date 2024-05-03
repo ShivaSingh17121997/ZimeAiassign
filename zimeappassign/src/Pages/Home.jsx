@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Button, ConfigProvider, Space, Input, Table, Tag } from "antd";
+import { useParams,  } from 'react-router-dom'; 
+
 
 
 
 import axios from 'axios';
-// import Card from '../Components/Card';
 import Pagination from '../Components/Pagination';
 
 
@@ -68,13 +69,15 @@ export default function Home() {
     ])
 
 
+    const { query } = useParams();
+    
 
     useEffect(() => {
         try {
             const skip = (page - 1) * 10
             console.log(searchQuery)
             // Fetching the data from the API 
-            axios.get(`https://dummyjson.com/posts/search?q=${searchQuery}&skip=${skip}&limit=10`)
+            axios.get(`https://dummyjson.com/posts/search?q=${searchQuery}&query=${query}&skip=${skip}&limit=10`)
 
                 .then((response) => {
                     console.log(response.data.posts);
@@ -86,7 +89,11 @@ export default function Home() {
         } catch (error) {
             console.log("Something is wrong in fetching the data");
         }
-    }, [page, searchQuery]);
+    }, [page, searchQuery, query]);
+
+    // const updateUrlWithQuery = () => {
+    //     history.push(`/${searchQuery}`);
+    // };
 
 
     // pagination
@@ -175,7 +182,7 @@ export default function Home() {
                             },
                         }}
                     >
-                        <Button type="primary" size="small" onClick={() => handleFilter("french")} >French   </Button>
+                        <Button type="primary" size="small" onClick={() => handleFilter("french")} >Classic   </Button>
 
                     </ConfigProvider>
 
@@ -306,7 +313,7 @@ export default function Home() {
                         <Button type="primary" size="small" onClick={() => handleFilter("classic")} >Classic </Button>
 
                     </ConfigProvider>
-                    <span style={{marginLeft:"100px"}} >
+                    <span style={{ marginLeft: "100px" }} >
 
                         <ConfigProvider
                             theme={{
@@ -353,7 +360,7 @@ export default function Home() {
 
 
             {/* Table  */}
-            <div style={{margin:"15px", maxWidth: "1280px" ,boxShadow :" rgba(99, 99, 99, 0.2) 0px 2px 8px 0px"}} >
+            <div style={{ margin: "15px", maxWidth: "1280px", boxShadow: " rgba(99, 99, 99, 0.2) 0px 2px 8px 0px" }} >
                 <Table pagination={false} columns={columns} dataSource={data} scroll={{ y: 360 }} />
 
             </div>
